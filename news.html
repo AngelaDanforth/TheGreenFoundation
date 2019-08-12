@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Green Foundation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 50px 25px;
+  width: 100%;
+  background: #32a852;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #32a852;
+  color: white !important
+
+
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+
+.w3-row-padding img {margin-bottom: 12px}
+
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+.bgimg, .bgimg2 {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card" id="myNavbar">
+      <a href="index.html" class="w3-bar-item w3-button w3-wide">HOME</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="projects.html" class="w3-bar-item w3-button">Projects</a>
+        <a href="getinvolved.html" class="w3-bar-item w3-button">Get Involved</a>
+        <a href="news.html" class="w3-bar-item w3-button">News</a>
+        <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button">Projects</a>
+    <a href="getinvolved.html" onclick="w3_close()" class="w3-bar-item w3-button">Get Involved</a>
+    <a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+  </nav>
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1600px" style="max-height:700">
+  <img class="w3-image" src="images/news.png" alt="TREES" width="1600" height="700">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">News</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">News</h5>
+    <h3 class="w3-hide-medium w3-hide-small">The Green Foundation</h3>
+  </div>
+
+  <!-- Navbar (placed at the bottom of the header image) -->
+  <div class="w3-bar w3-white w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+
+  </div>
+</header>
+
+<!-- Navbar on small screens -->
+<div class="w3-center w3-white w3-padding-16 w3-hide-large w3-hide-medium">
+<div class="w3-bar w3-white">
+
+</div>
+</div>
+<!-- Page content -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+<h2 class="w3-wide">Gallery</h2>
+<p class="w3-opacity"><i>Photos by Tony Valente
+</i></p>
+</div>
+
+  <div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
+    <div class="w3-half">
+      <img src="images/1.png" style="width:100%">
+      <img src="images/2.jpg" style="width:100%">
+      <img src="images/3.jpg" style="width:100%">
+      <img src="images/4.png" style="width:100%">
+      <img src="images/5.jpg" style="width:100%">
+      <img src="images/6.jpg" style="width:100%">
+
+    </div>
+
+    <div class="w3-half">
+      <img src="images/8.png" style="width:100%">
+      <img src="images/9.jpg" style="width:100%">
+      <img src="images/10.jpg" style="width:100%">
+      <img src="images/11.jpg" style="width:100%">
+      <img src="images/12.jpeg" style="width:100%">
+      <img src="images/7.jpg" style="width:100%">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <h2 class="w3-wide">Calendar</h2>
+  <p class="w3-opacity"><i>Our Events
+  </i></p>
+
+  <div class="month">
+    <ul>
+      <li class="prev">&#10094;</li>
+      <li class="next">&#10095;</li>
+      <li>
+        August<br>
+        <span style="font-size:18px">2019</span>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="weekdays">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+  </ul>
+
+  <ul class="days">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li>28</li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li>
+    <li></li>
+  </ul>
+  </div>
+</div>
+
+
+
+<!-- End page content -->
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large">
+  <p>Follow us on Social Media</p>
+  <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <a href="https://www.snapchat.com/" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+  <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+  <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+  <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
